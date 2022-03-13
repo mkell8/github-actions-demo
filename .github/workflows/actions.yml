@@ -2,9 +2,23 @@ name: Actions workflow
 
 on:
   push:
+    # branches-ignore: can use only branches ignore or branches
+    #   - master
     branches:
       - main
       - 'feature/*'
+      - '!feature/featC' #ignore this branch with !
+    tags:
+      - v1
+    # tags-ignore: can not use at same time as tags
+      # - ""
+    # paths-ignore:
+    #   - "docs/**"
+    paths:
+      - **.js" #only match js files.  *** could be useful for monorepo ***
+      - '!filetoignore.js'
+    
+
   repository_dispatch:
     types: [build]
   # schedule:
