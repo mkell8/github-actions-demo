@@ -3,7 +3,7 @@ name: shell commnands
 on: [push]
 
 jobs:
-  #jobs run in paralell
+  #jobs run in paralell?
   run-shell-command: 
     runs-on: ubuntu-latest
     steps:
@@ -21,6 +21,7 @@ jobs:
 
   run-windows-commands:
     runs-on: windows-latest
+    needs: ["run-shell-command"]
     steps:
       - name: Directory Powershell
         run: Get-Location
