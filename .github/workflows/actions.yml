@@ -1,7 +1,9 @@
 name: Actions workflow
 
 on:
-  # push:
+  push:
+    branches:
+      - main
   repository_dispatch:
     types: [build]
   # schedule:
