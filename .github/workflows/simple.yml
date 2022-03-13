@@ -3,6 +3,7 @@ name: shell commnands
 on: [push]
 
 jobs:
+  #jobs run in paralell
   run-shell-command: 
     runs-on: ubuntu-latest
     steps:
@@ -17,5 +18,15 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+
+      - name: Directory Bash
+        run: pwd
+        shell: bash
         
         
