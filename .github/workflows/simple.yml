@@ -3,9 +3,11 @@ name: shell commnands
 on: [pull_request]
 
 jobs:
-  #jobs run in paralell?
+  #jobs run in paralell by default.  Can add needs parameter to depend on another job
   run-shell-command: 
     runs-on: ubuntu-latest
+    continue-on-error: false # default is false
+    timeout-minutes: 360 # default is 360 so 6 hours, can also be used at step level
     steps:
       - name: echo a string
         run: echo "Hello!!!"
