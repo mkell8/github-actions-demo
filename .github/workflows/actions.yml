@@ -15,7 +15,7 @@ on:
     # paths-ignore:
     #   - "docs/**"
     paths:
-      - **.js" #only match js files.  *** could be useful for monorepo ***
+      - "**.js" #only match js files.  *** could be useful for monorepo ***
       - '!filetoignore.js'
     
 
