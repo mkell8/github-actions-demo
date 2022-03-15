@@ -8,8 +8,8 @@ on:
       - main
       - 'feature/*'
       - '!feature/featC' #ignore this branch with !
-    tags:
-      - v1
+    # tags:
+    #   - v1
     # tags-ignore: can not use at same time as tags
       # - ""
     # paths-ignore:
